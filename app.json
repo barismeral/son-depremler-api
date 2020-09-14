@@ -1,0 +1,8 @@
+{
+    "name": "Son Depremler REST-API",
+    "description": "son depremler",
+    "repository": "https://github.com/barismeral/son-depremler-api.git",
+    "logo": "https://cdn.rawgit.com/heroku/node-js-getting-started/master/public/node.svg",
+    "keywords": ["node", "express", "heroku","deprem","sondepremler","api"],
+    "image": "heroku/nodejs"
+  }
