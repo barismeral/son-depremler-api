@@ -12,7 +12,7 @@
 ## Örnek Kullanımlar
 
 
-## JavaScript
+## JavaScript Jquery
 ```javascript
 
     var settings = {
