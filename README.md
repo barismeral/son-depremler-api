@@ -4,9 +4,150 @@
 ###### Proje Çalışan hali heroku da tutulmaktadır.
 
 
-## Kullanım
 
-    
+
+#### GET isteği
+    https://son-depremler.herokuapp.com/sondepremler
+
+## Örnek Kullanımlar
+
+
+## JavaScript
+```javascript
+
+    var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://son-depremler.herokuapp.com/sondepremler",
+  "method": "GET",
+  "headers": {
+    "cache-control": "no-cache",
+  }
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
+
+```
+## JavaScript AJAX
+```javascript
+
+var data = null;
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+  if (this.readyState === 4 && this.status === 200) {
+
+    console.log(this.responseText);
+  }
+});
+
+xhr.open("GET", "https://son-depremler.herokuapp.com/sondepremler");
+xhr.setRequestHeader("cache-control", "no-cache");
+
+xhr.send(data);
+
+```
+
+
+## node.js REQUEST
+```javascript
+var request = require("request");
+
+var options = { method: 'GET',
+  url: 'https://son-depremler.herokuapp.com/sondepremler',
+  headers: 
+   { 
+     'cache-control': 'no-cache'
+   } };
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+
+  console.log(body);
+});
+
+```
+
+## PHP HTTPRequest
+```php
+
+<?php
+
+$request = new HttpRequest();
+$request->setUrl('https://son-depremler.herokuapp.com/sondepremler');
+$request->setMethod(HTTP_METH_GET);
+
+$request->setHeaders(array(
+  'cache-control' => 'no-cache'
+));
+
+try {
+  $response = $request->send();
+
+  echo $response->getBody();
+} catch (HttpException $ex) {
+  echo $ex;
+}
+
+```
+
+## PHP CURL
+```php
+
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://son-depremler.herokuapp.com/sondepremler",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "GET",
+  CURLOPT_HTTPHEADER => array(
+    "cache-control: no-cache",
+    "postman-token: ed8a59f5-46d2-8926-983a-94e9cb85c5af"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+
+```
+## Python 3
+```python
+
+import http.client
+
+conn = http.client.HTTPSConnection("son-depremler.herokuapp.com")
+
+headers = {
+    'cache-control': "no-cache",
+    'postman-token': "552dc67c-9a36-95bd-1a35-b73212f005a0"
+    }
+
+conn.request("GET", "/sondepremler", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+```
 
 
 Örnek Çıktı:

@@ -30,7 +30,7 @@ app.get('/sondepremler', (req, res) => {
       let json = body.map(obj =>{
          return{
 
-              "time":obj.time,
+              "zaman":obj.time,
               "enlem":obj.lat,
               "boylam":obj.lon,
               "derinlik":obj.depth,
