@@ -1,16 +1,15 @@
 # TC AFAD Son Depremler API
-## T.C. Afet ve Acil Durum Yönetimi Başkanlığı Deprem Dairesi Başkanlığı güncel Covid-19 verileri
+## T.C. Afet ve Acil Durum Yönetimi Başkanlığı Deprem Dairesi Başkanlığı güncel deprem  verileri
 
 ###### Proje Çalışan hali heroku da tutulmaktadır.
 
-
+https://son-depremler.herokuapp.com/sondepremler
 
 
 #### GET isteği
     https://son-depremler.herokuapp.com/sondepremler
 
 ## Örnek Kullanımlar
-
 
 ## JavaScript Jquery
 ```javascript
